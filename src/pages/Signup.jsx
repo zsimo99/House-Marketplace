@@ -39,7 +39,8 @@ function Signup() {
 
         navigate("/")
       } catch (error) {
-        toast.error("somthi,g wrong with ur registration")
+        console.log(error)
+        toast.error(error.message)
       }
     }
 

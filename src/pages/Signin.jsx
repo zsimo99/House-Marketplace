@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link,useNavigate } from "react-router-dom"
 import {getAuth,signInWithEmailAndPassword} from "firebase/auth"
 import {toast} from "react-toastify"
+import "../firebase.config"
 import visibilityIcon from "../assets/svg/visibilityIcon.svg"
 import arrowRight from "../assets/svg/keyboardArrowRightIcon.svg"
 import OAuth from "../components/OAuth"
@@ -33,7 +34,8 @@ function Signin() {
                 
             }
         } catch (error) {
-            toast.error("Bad User Credentials")
+            console.log(error)
+            toast.error(error.message)
         }
     }
 
