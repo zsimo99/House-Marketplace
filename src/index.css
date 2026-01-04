@@ -71,6 +71,14 @@ button {
   align-items: center;
   justify-content: center;
 }
+.primaryButton.disabled,
+.primaryButton:disabled {
+  background-color: #9ca3af; /* gray */
+  color: #e5e7eb;
+  cursor: not-allowed;
+  pointer-events: none; /* important for <a> */
+  opacity: 0.7;
+}
 
 .removeIcon {
   cursor: pointer;
